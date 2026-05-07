@@ -1,3 +1,8 @@
+.online-content{
+  padding: 0;
+}
+
+/* 온라인헤더 */
 .online-intro {
   display: flex;
   flex-direction: column;
@@ -25,4 +30,55 @@
 .online-category button.active {
   background: var(--medium--biue);
   color: var(--e-s-t_blue);
+}
+/* 슬라이드네비 */
+.slides_nav {
+  display: flex;
+  gap: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.slide-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: var(--light--gray);
+  color:var(--medium--gray);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.slide-btn:hover {
+  background: var(--medium--biue);
+  color: var(--e-s-t_blue);
+}
+.slide-btn.next {
+  background: var(--medium--biue);
+  color: var(--e-s-t_blue);
+}
+/* 온라인 컨텐츠 */
+.online-content ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.online-content ul li {
+  height: 396px;
+}
+
+.online-content img {
+  border-radius: 5px;
+}
+
+.online-content .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px; 
+  padding-left: 10px;
 }
