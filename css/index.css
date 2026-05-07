@@ -81,7 +81,9 @@
 @media (max-width: 1024px) {
   .container {
     width: 100%;
-    flex-direction: column;
+    align-items: center;
+  }
+  .hero-title-box {
     align-items: center;
   }
 }
