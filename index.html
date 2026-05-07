@@ -19,8 +19,6 @@
 <!-- 조영빈 -->
 <!-- //조영빈 -->
 <!-- 최이리나 -->
- <title>EST Camp</title>
-
   <style>
 
     *{
@@ -30,6 +28,7 @@
     }
 
     body{
+      margin: 0;
       font-family:Arial, sans-serif;
       background:#f5f5f5;
     }
@@ -39,7 +38,9 @@
     .banner{
       width:100%;
       height:320px;
-      background:linear-gradient(135deg,#081a52,#1f4ed8,#6d28d9);
+      background-image:url('banner.png');
+      background-size:cover;
+      background-position:center;
       display:flex;
       justify-content:center;
       align-items:center;
@@ -47,16 +48,18 @@
     }
 
     .banner-content{
+      position:relative;
+      z-index:2;
       text-align:center;
     }
 
     .banner-content h1{
-      font-size:48px;
+      font-size:64px;
       margin-bottom:20px;
     }
 
     .banner-content p{
-      font-size:22px;
+      font-size:36px;
       margin-bottom:25px;
     }
 
@@ -73,6 +76,7 @@
     /* 밑블럭 */
 
     .content{
+      position:relative;
       width:1100px;
       margin:50px auto;
       background:white;
@@ -109,7 +113,23 @@
       margin-bottom:15px;
       color:#1f4ed8;
     }
-
+    .footer-icons{
+      display: flex;
+      position:absolute;
+      right: 40px;
+      top:100px;
+      gap: 12px;
+    }
+    .footer-icons img{
+      width:30px;
+      height:30px;  
+    }
+    .footer-text{
+      margin-top: 20px;
+      padding-top: 20px;
+      font-size: 12px;
+      color: #666;
+    }
   </style>
 </head>
 
@@ -118,10 +138,10 @@
   <!-- blue block -->
 
   <div class="banner">
-
+   
     <div class="banner-content">
 
-      <h1>EST CAMP</h1>
+    
 
       <p>
         2026 인공지능사관학교<br>
@@ -138,7 +158,8 @@
 
   <div class="content">
 
-    <h2>이스트소프트 부트캠프</h2>
+    <img src="logo.png" alt="EST camp logo"
+    class="logo-img"> 
 
     <p>
       실무 중심 프로젝트와 AI 기반 웹 개발 교육을 진행합니다.
@@ -147,24 +168,38 @@
     <div class="cards">
 
       <div class="card">
-        <h3>프론트엔드 과정</h3>
+        <h2>프론트엔드 과정</h2>
         <p>HTML CSS JavaScript 학습</p>
       </div>
 
       <div class="card">
-        <h3>백엔드 과정</h3>
+        <h2>백엔드 과정</h2>
         <p>서버와 데이터베이스 개발</p>
       </div>
 
       <div class="card">
-        <h3>AI 프로젝트</h3>
+        <h2>AI 프로젝트</h2>
         <p>AI 활용 실전 프로젝트</p>
       </div>
 
+       <div class="footer-icons">
+
+        <a href="#">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="instagram">
+        </a>
+
+        <a href="#">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" alt="kakao">
+        </a>
+       </div>
+      </div>
+      <div class="footer-text">
+  서울시 서초구 반포대로 3, 이스트빌딩 | 문의처 : 010-5084-4620 (평일 오전 10시~오후 5시) | © 2026 ESTTfamily All Rights Reserved.
+</div>
     </div>
 
-  </div>
-
+  
+      
 </body>
 </html>
 <!-- //최이리나 -->
