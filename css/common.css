@@ -35,7 +35,11 @@
 
 /* Effect styles */
 --review_shadow:  0px 4px 4px rgba(0, 0, 0, 0.1);
-
+}
+.hero-container {
+  max-width: 1272px;
+  margin: 0 auto;
+  padding: 80 0;
 }
 
 /* 레이아웃 */
