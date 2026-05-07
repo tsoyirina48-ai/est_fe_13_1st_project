@@ -47,13 +47,13 @@ h1 {
   font-size: var(--text-title-xl);
 }
 
-h2{
+h2 {
   font-family: Pretentard;
   font-weight: bold;
   font-size: var(--text-h2-lg);
 }
 
-h3{
+h3 {
   font-family: Pretentard;
   font-weight: bold;
   font-size: var(--text-h3-lg);
@@ -174,10 +174,6 @@ section {
   background-color: #f9f9f9;
 }
 /* 타이포그래피 */
-.section-label{
-  font-weight:700;
-  line-height:19px;
-}
 .primary-color {
   color: var(--e-s-t_blue);
 }
@@ -217,26 +213,6 @@ p {
   font-size: 14px;
   vertical-align: baseline;
 }
-.btn-cta{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width: 218px;
-  height: 54px;
-  font-size: var(--button--big);
-  border-radius:5px;
-  border: solid 1px white;
-  background:rgba(0, 0, 0, 0.5);
-  color:var(--white);
-  border-radius:5px;
-  transition:0.3s;
-}
-
-.btn-cta:hover{
-  background-color:var(--e-s-t_blue);
-  color:var(--white);
-  border: solid 1px rgba(1, 1, 1, 0);
-}
 .slide-btn {
   display: flex;
   justify-content: flex-end;
@@ -244,7 +220,6 @@ p {
 .reviewtitle {
   text-align: center;
 }
-
 /* 타이포그래피 */
 /* 링크 버튼 */
 
