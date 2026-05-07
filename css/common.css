@@ -213,6 +213,14 @@ p {
   font-size: 14px;
   vertical-align: baseline;
 }
+.slide-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.reviewtitle {
+  text-align: center;
+}
+
 /* 타이포그래피 */
 /* 링크 버튼 */
 
