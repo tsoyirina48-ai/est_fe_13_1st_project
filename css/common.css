@@ -39,8 +39,28 @@
 }
 
 /* 레이아웃 */
+.container{
+  max-width:1272px;
+  margin:0 auto;
+}
+.hidden{
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip-path:inset(50%);
+}
 /* 타이포그래피 */
 /* 링크 버튼 */
-
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--e-s-t_blue);
+  color:var(--white);
+  border-radius:5px;
+  font-size:var(--text-link);
+  transition:0.3s;
+}
 /* 헤더 -  */
 /* 푸터 -  */
