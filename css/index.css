@@ -366,7 +366,6 @@ header .btn-md{
   }
 }
 /* 커리큘럼 섹션 */
-@import url(common.css);
 
 #curriculum .container{
   display:flex;
@@ -411,6 +410,28 @@ header .btn-md{
 .roadmap-item:last-child{
   width:140px;
 }
+.curriculum-roadmap{
+  position:relative;
+}
+.roadmap-dots-group{
+  top:20px;
+  left:50%;
+  width:100%;
+  max-width:869px;
+  pointer-events:none;
+  position:absolute;
+  transform:translateX(-50%);
+  display:flex;
+  justify-content:space-between;
+  box-sizing:border-box;
+}
+.sub-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background-color:var(--e-s-t_blue);
+  transform:translateY(-50%);
+}
 .roadmap-dot{
   display:flex;
   align-items: center;
@@ -421,7 +442,23 @@ header .btn-md{
   box-shadow:0 0 20px rgba(0, 117, 255, .4);
   border-radius:50%;
   margin-bottom:10px;
-  transition:.3s ease;
+  transition:.3s ease-out;
+}
+.roadmap-item:hover{
+  transform:scale(1.05);
+  transition:transform .3s ease;
+}
+.roadmap-item:hover .roadmap-dot{
+  transform:scale(1.15);
+  background-color:#fff;
+  box-shadow:
+    0 0 10px rgba(0, 117, 255, .8),
+    0 0 30px rgba(0, 117, 255, .4),
+    0 0 50px rgba(0, 117, 255, .2);
+}
+.roadmap-dot:hover::after{
+  transform:scale(1.2);
+  background-color:#5599ff;
 }
 .roadmap-dot::after{
   content:'';
@@ -446,7 +483,9 @@ header .btn-md{
   top:20px;
   width:100%;
   left:0;
+  z-index:0;
 }
+
 .curriculum-btn{
   display:flex;
   justify-content: center;
@@ -465,197 +504,205 @@ header .btn-md{
   color:var(--medium--blue);
 }
 
-@media (max-width:1024px){
-  
-}
-/* @media (max-width:768px){
-  .roadmap-items{
-    display:grid;
-    grid-template-rows:repeat(5, auto);
-    row-gap:40px;
+@media (max-width: 1024px) {
+  #curriculum .container {
+    gap: 150px; 
   }
-  .roadmap-item{
-    width:100%;
-    display:grid;
-    grid-template-columns:40px 1fr;
-    column-gap:30px;
-    row-gap:0;
-    justify-content: start;
-    align-items:center;
-  }
-  .roadmap-line{
-    position:absolute;
-    width:1px;
-    height:100%;
-    left:20px;
-    top:-4px;
-    z-index:-1;
-  }
-  .roadmap-dot{
-    grid-column:1;
-    grid-row:1/3;
-    align-self:start;
-  }
-  .curriculum-item-desc{
-    grid-column:2;
-  }
-  .roadmap-item-title,
-  .curriculum-item-desc {
-  margin: 0; 
-  padding: 0;
-  .roadmap-item-title {
+  .curriculum-roadmap {
+    width: 100%;
+    max-width: 964px;
+    margin: 0 auto;
     position: relative;
-    padding-bottom: 10px;
+    min-height: 350px; 
+    display: flex;
+    align-items: center;
+  }
+  .roadmap-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--e-s-t_blue);
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+  .roadmap-items, .roadmap-dots-group {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr)); 
+    width: 100%;
+    max-width: 964px;
+    margin: 0 auto;
+    gap: 0; 
+    padding: 0;
+  }
+  .roadmap-dots-group {
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(calc(-50% + 5px));
   }
 
-  .roadmap-item-title::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100px; 
-  } */
-}
-/* .curriculum-roadmap{
-  position:relative;
-  max-width:1272px;
-  width:100%;
-  margin:0 auto;
-  padding:0 50px;
-  box-sizing:border-box;
-}
-.curriculum-item-week{
-  font-size:1rem;
-  display:block;
-  line-height:19.1px;
-  margin-top:20px;
-}
-.roadmap-line{
-  position:absolute;
-  height:1px;
-  width:100%;
-  left:0;
-  background:var(--e-s-t_blue);
-  top:110px;
-}
-.roadmap-items{
-  display:flex;
-  justify-content: space-between;
-  position:relative;
-  z-index:2;
-  width:100%;
-  margin:90px 0 96px 0;
-}
-.roadmap-item{
-  width:40px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  position:relative;
-}
-.roadmap-item:not(:last-child)::after{
-  content:'';
-  position:absolute;
-  top:20px;
-  left:calc(243px / 2);
-  width:10px;
-  height:10px;
-  background-color:var(--e-s-t_blue);
-  border-radius:50%;
-  transform:translate(-50%, -50%);
-  z-index:1;
-}
-.roadmap-item-title,
-.curriculum-item-desc {
-  width: max-content;
-  text-align: center;
-  white-space: nowrap; 
-}
-.roadmap-item-title::after{
-  content:"";
-  display:block;
-  height:1px;
-  background-color:var(--liner);
-  width:163px;
-  margin:10px auto;
-}
-.roadmap-item-title .curriculum-item-week{
-  margin-bottom:10px;
-}
-.roadmap-item:first-child .roadmap-item-title::after,
-.roadmap-item:last-child .roadmap-item-title::after{
-  width:140px;
-  margin:10px auto;
-}
-.roadmap-dot{
-  width:40px;
-  height:40px; 
-  background-color:#d9e5ff;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content: center;
-  gap:243px;
-  position:relative;
-  z-index:3;
-  box-shadow:0 0 20px rgba(0, 117, 255, .4);
-}
-.roadmap-dot::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-color: var(--e-s-t_blue);
-  filter:blur(2px);
-  border-radius: 50%;
-}
-#curriculum .curriculum-btn{
-  width:120px;
-  line-height:34px;
-  font-size:var(--text-p);
-  color:var(--e-s-t_blue);
-  background-color:var(--medium--blue);
-  text-align:center;
-  border-radius:5px;
-  transition:.3s;
-  cursor:pointer;
-}
-#curriculum .curriculum.-tn:hover{
-  background-color:var(--e-s-t_blue);
-  color:var(--white);
-} */
-
-/* @media (max-width: 1024px) {
+  .sub-dot {
+    grid-column: span 1;
+    justify-self: center; 
+    align-self: center; 
+  }
+  .sub-dot:nth-child(1) { grid-column: 2; }
+  .sub-dot:nth-child(2) { grid-column: 4; }
+  .sub-dot:nth-child(3) { grid-column: 6; }
+  .sub-dot:nth-child(4) { grid-column: 8; }
   .roadmap-items {
-    height: 300px; 
-    display: flex;
-    align-items: center; 
+    z-index: 2;
+    position: relative;
+    width: 100%;
   }
 
   .roadmap-item {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    width: 40px;
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
   }
+  .roadmap-item:nth-child(1) { grid-column: 1; justify-self: start; align-items: flex-start; }
+  .roadmap-item:nth-child(2) { grid-column: 3; justify-self: center; align-items: center; }
+  .roadmap-item:nth-child(3) { grid-column: 5; justify-self: center; align-items: center; }
+  .roadmap-item:nth-child(4) { grid-column: 7; justify-self: center; align-items: center; }
+  .roadmap-item:nth-child(5) { grid-column: 9; justify-self: end; align-items: flex-end; }
+  .roadmap-item-title,
+  .curriculum-item-desc {
+    white-space: nowrap;
+    text-align: inherit; 
+  }
+  .roadmap-item:nth-child(even) {
+    transform: translateY(calc(-50% + 20px)); /* 작성하신 보정값 유지 */
+    flex-direction: column-reverse;
+  }
+  .roadmap-item:nth-child(odd) {
+    transform: translateY(calc(50% - 20px)); 
+  }
+
   .roadmap-dot {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    margin: 0; 
+    flex-shrink: 0;
   }
-  .roadmap-item:nth-child(odd) .roadmap-item-title {
-    margin-bottom: 80px;
+  .roadmap-item:first-child {
+    grid-column: 1;
+    justify-self: center; 
+    align-items: center;
+    padding-left: 20px; 
   }
-  .roadmap-item:nth-child(even) .roadmap-item-title {
-    margin-top: 80px; 
+  .roadmap-item:last-child {
+    grid-column: 9;
+    justify-self: center; 
+    align-items: center;
+    padding-right: 20px; 
+  }
+  .roadmap-item:nth-child(even) .roadmap-item-title{
+    flex-direction:column-reverse;
+  }
+  .roadmap-item:nth-child(2),
+  .roadmap-item:nth-child(3),
+  .roadmap-item:nth-child(4) {
+    justify-self: center;
+    align-items: center;
+  }
+  .roadmap-item-title,
+  .curriculum-item-desc {
+    white-space: nowrap;
+    text-align: center; 
+  }
+}
+@media (max-width:768px){
+  .roadmap-dots-group{
+    display:none;
+  }
+  .roadmap-item,
+  .roadmap-item:nth-child(odd),
+  .roadmap-item:nth-child(even),
+  .roadmap-item:first-child,
+  .roadmap-item:last-child{
+    transform:none;
+    width:fit-content;
+    padding:0;
+  }
+  .curriculum-roadmap{
+    position:relative;
+    width:100%;
   }
   .roadmap-line{
-    top:240px;
+    position:absolute;
+    left:20px;     
+    top:0;    
+    bottom:0;  
+    width:1px;
+    transform:translateY(20px);
+    height:calc(100% - 40px);
+    background-color:var(--e-s-t_blue);
   }
-  .roadmap-item:not(:last-child)::after {
-  top: 50%; 
-  left: calc(243px / 2); 
-  transform: translate(-50%, -50%);
+  .roadmap-items{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    position:relative;
   }
-} */
+  .roadmap-item{
+    display:grid;
+    grid-template-columns:40px auto;
+    row-gap:8px;
+    column-gap:30px;
+    align-items:center; 
+    position:relative;
+    z-index:1;
+  }
+  .roadmap-item:nth-child(even) .roadmap-item-title{
+    flex-direction:column;
+  }
+  .roadmap-dot{
+    grid-column:1;
+    width:40px;
+    height:40px;
+    margin:0;
+    grid-row:1/3;
+    justify-self:center;
+    align-self:center;
+    flex-shrink:0;
+  }
+  .roadmap-item-title{
+  grid-column:2;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+    align-items:center;
+  text-align:center;
+
+  margin:0;
+}
+  .roadmap-item-title::after{
+    content:'';
+
+    display:block;
+
+    width:100%;
+    max-width:140px;
+
+    height:1px;
+
+    margin-top:8px;
+
+    background-color:var(--liner);
+  }
+  .curriculum-item-desc{
+    grid-column:2;
+    margin:0;
+    text-align:center;
+  }
+}
 
 
 .hero{
