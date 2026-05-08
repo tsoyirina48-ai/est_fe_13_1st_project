@@ -95,6 +95,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+}
 a{
   cursor:pointer;
 }
@@ -236,13 +237,10 @@ p {
   font-size: 14px;
   vertical-align: baseline;
 }
-.slide-btn,
+
 .more {
   display: flex;
   justify-content: flex-end;
-}
-.slide-btn {
-  padding: 30px 0 20px;
 }
 .reviewtitle {
   text-align: center;
@@ -293,6 +291,36 @@ p{
   height:36px;
   font-size:14px;
   vertical-align:baseline;
+}
+/* 슬라이드 */
+.slides_nav {
+  display: flex;
+  gap: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.slide-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: var(--light--gray);
+  color:var(--medium--gray);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.slide-btn:hover {
+  background: var(--medium--blue);
+  color: var(--e-s-t_blue);
+}
+.slide-btn.next {
+  background: var(--medium--blue);
+  color: var(--e-s-t_blue);
 }
 /* 헤더 -  */
 /* 푸터 -  */
