@@ -1,4 +1,9 @@
 /* 온라인 */
+.online .container {
+  display: flex;
+  flex-direction: column;
+}
+
 .online-content {
   padding: 0;
 }
