@@ -206,6 +206,168 @@
   }
 }
 
+/* 헤더 */
+.main-header{
+  position:sticky;
+  background-color:#ffffff;
+  box-shadow:0 2px 10px rgba(0, 0, 0, .05);
+  top:0;
+  z-index:100;
+  width:100%;
+  padding:22px 0;
+}
+header > .container{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+header .logo{
+  height:25px;
+}
+.logo a{
+  display:block;
+  width:100%;
+  height:100%;
+}
+nav ul{
+  display:flex;
+  gap:30px;
+}
+nav li a{
+  display:block; 
+  font-size:var(--text-link);
+  line-height:27px;
+  color:var(--medium--black);
+}
+header .btn-md{
+  width:108px; 
+  height:36px;
+  font-size:14px;
+  vertical-align:baseline;
+}
+.btn-menu{
+  display:none;
+}
+
+@media (max-width:1024px){
+  .main-header{
+    padding:16px 30px;
+  }
+}
+@media (max-width:768px){
+  .main-header{
+    padding:12px 20px;
+  }
+  .btn-menu{
+    display:block;
+    position:relative;
+    width:28px;
+    height:24px;
+    background:transparent;
+    border:none;
+    padding:0;
+  }
+  .toggle-line,
+  .toggle-line::before,
+  .toggle-line::after{
+    content:'';
+    position:absolute;
+    display:block;
+    width:100%;
+    height:2px;
+    background-color:#333;
+    transition:.3s;
+  }
+  .toggle-line{
+    top:50%;
+    transform:translateY(-50%);
+  }
+  .toggle-line::before{
+    top:-8px;
+  }
+  .toggle-line::after{
+    top:8px;
+  }
+  .btn-menu.is-active .toggle-line { background-color: transparent; }
+  .btn-menu.is-active .toggle-line::before { transform: rotate(45deg); top: 0; }
+  .btn-menu.is-active .toggle-line::after { transform: rotate(-45deg); top: 0; }
+  .main-header .btn{
+    display:none;
+  }
+  nav ul{
+    display:none;
+  }
+}
+/* 과정 찾기 섹션 */
+
+.container{
+  display:flex;
+  justify-content: space-between;
+}
+.course-intro{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+}
+.course-title{
+  line-height:43px;
+}
+#course .title-line{
+  display:block;
+}
+.course-grid{
+  max-width:840px;
+  width: 100%;
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:24px;
+}
+.course-card{
+  padding:30px;
+  display:flex;
+  min-height:216px;
+  justify-content: space-between;
+  box-sizing:border-box;
+  border-radius:5px;
+  background-color:var(--white);
+  box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.14);
+}
+.course-card-info{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.course-card-image{
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+  flex-shrink:0;
+}
+@media (max-width:1024px){
+  .container{
+    flex-direction:column;
+    gap:50px;
+  }
+  .course-intro{
+    flex-direction:row;
+    align-items:flex-end;
+  }
+  .course-grid{
+    max-width:964px;
+  }
+}
+@media (max-width:768px){
+  .course-intro{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+  }
+  .course-grid{
+    grid-template-columns:repeat(1, 4fr);
+  }
+}
+/* 커리큘럼 섹션 */
+@import url(common.css);
 
 .container{
   display:flex;
