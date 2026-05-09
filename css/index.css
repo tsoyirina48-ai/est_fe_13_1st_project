@@ -51,6 +51,12 @@
     flex-wrap:wrap;
     padding: 30px;
   }
+  .text-h2-lg {
+    font-size: 32px;
+  }
+  .text-h3-md {
+    font-size: 20px;
+  }
 }
 @media (max-width: 768px) {
   .online-intro{
@@ -58,6 +64,12 @@
   }
   .slides_nav {
     display: none;
+  }
+  .text-h2-lg {
+    font-size: 26px;
+  }
+  .text-h3-md {
+    font-size: 18px;
   }
 }
 /* 온라인 */
@@ -163,6 +175,21 @@
   }
   .hero-title-box {
     align-items: center;
+  }
+  .hero-title-box .text-title-xl {
+    font-size: 48px;
+  }
+  .hero-title-desc {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title-box .text-title-xl{
+    font-size: 38px;
+  }
+  .hero-title-desc {
+    font-size: 16px;
   }
 }
 /* hero */
