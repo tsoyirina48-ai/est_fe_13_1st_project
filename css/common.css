@@ -43,13 +43,21 @@
 
 }
 
-h1{
+.text-title-xl {
   font-family: Pretentard;
   font-weight: bold;
   font-size: var(--text-title-xl);
   line-height: 81px;
   color: var(--white);
 }
+
+/* h1{
+  font-family: Pretentard;
+  font-weight: bold;
+  font-size: var(--text-title-xl);
+  line-height: 81px;
+  color: var(--white);
+} */
 
 h2{
   font-family: Pretentard;
