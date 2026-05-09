@@ -328,4 +328,9 @@ p{
   color: var(--e-s-t_blue);
 }
 /* 헤더 -  */
+.intro-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 /* 푸터 -  */

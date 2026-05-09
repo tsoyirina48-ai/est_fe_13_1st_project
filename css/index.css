@@ -3,11 +3,6 @@
   padding: 0;
 }
 /* 온라인헤더 */
-.online-intro {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
 .online-category{
   display: flex;
   gap: 24px;
