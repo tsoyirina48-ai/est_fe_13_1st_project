@@ -755,6 +755,10 @@ footer{
   align-items:flex-start;
   margin-top:60px;
 }
+.footer-info,
+.sns-links{
+  min-width:0;
+}
 .sns-links{
   display:flex;
   gap:10px;
