@@ -47,6 +47,8 @@ h1{
   font-family: Pretentard;
   font-weight: bold;
   font-size: var(--text-title-xl);
+  line-height: 81px;
+  color: var(--white);
 }
 
 h2{
@@ -237,11 +239,10 @@ p{
   width: 218px;
   height: 54px;
   font-size: var(--button--big);
-  border-radius:5px;
+  border-radius: 50px;
   border: solid 1px white;
   background:rgba(0, 0, 0, 0.5);
   color:var(--white);
-  border-radius:5px;
   transition:0.3s;
 }
 
