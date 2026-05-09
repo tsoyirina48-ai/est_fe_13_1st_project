@@ -136,7 +136,7 @@
   gap: 44px;
 }
 
-.title-button-box .Button-Big {
+/* .title-button-box .Button-Big {
   width: 174px;
   height: 54px;
   font-size: var(--button--big);
@@ -147,15 +147,13 @@
   align-items: center;
   color: var(--white);
   border-radius: 5px;
-}
+} */
 /* button style */
 .title-button-box .left-btn {
   background: var(--e-s-t_blue);
-  transition: 0.3s ease;
 }
 .title-button-box .right-btn {
   border: 1px solid var(--white);
-  transition: 0.3s ease;
 }
 
 .title-button-box .left-btn:hover{

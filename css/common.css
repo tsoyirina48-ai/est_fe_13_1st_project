@@ -220,6 +220,21 @@ p{
   color:var(--medium--gray);
 }
 /* 링크 버튼 */
+.Button-Big{
+  width: 174px;
+  height: 54px;
+  font-size: var(--button--big);
+  font-family: 'Pretendard';
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+
 .btn-primary{
   display:inline-flex;
   align-items:center;
