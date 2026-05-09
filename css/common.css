@@ -27,18 +27,20 @@
 --darkmode-primary-button: rgba(99, 102, 241, 1);
 --darkmode-primary-button-text: rgba(248, 250, 252, 1);
 
-  /* Text-size styles */
-  --text-title-xl: 56px;
-  --text-h2-lg: 36px;
-  --text-h3-md: 24px;
-  --text-h4-sm: 16px;
-  --text-p: 14px;
-  --text-link: 14px;
-  --button--big: 18px;
-  --button--s: 14px;
+/* Text-size styles */
+--text-title-xl: 56px;
+--text-h2-lg: 36px;
+--text-h3-md: 24px;
+--text-h3-md-s: 20px;
+--text-h4-sm: 16px;
+--text-p: 14px;
+--text-link: 14px;
+--button--big: 18px;
+--button--s: 14px;
 
-  /* Effect styles */
-  --review_shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+/* Effect styles */
+--review_shadow:  0px 4px 4px rgba(0, 0, 0, 0.1);
+
 }
 html{
   background-color:#ffffff;
@@ -48,13 +50,23 @@ body{
   background-color:#ffffff;
 }
 
-h1 {
+.text-title-xl {
   font-family: Pretentard;
   font-weight: bold;
   font-size: var(--text-title-xl);
+  line-height: 81px;
+  color: var(--white);
 }
 
-h2 {
+/* h1{
+  font-family: Pretentard;
+  font-weight: bold;
+  font-size: var(--text-title-xl);
+  line-height: 81px;
+  color: var(--white);
+} */
+
+h2{
   font-family: Pretentard;
   font-weight: bold;
   font-size: var(--text-h2-lg);
@@ -341,6 +353,19 @@ p{
   font-size:14px;
   vertical-align:baseline;
 }
+.btn-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 218px;
+  height: 54px;
+  font-size: var(--button--big);
+  border-radius: 50px;
+  border: solid 1px white;
+  background:rgba(0, 0, 0, 0.5);
+  color:var(--white);
+  transition:0.3s;
+}
 
 .slides_nav {
   display: flex;
@@ -372,4 +397,9 @@ p{
   color: var(--e-s-t_blue);
 }
 /* 헤더 -  */
+.intro-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 /* 푸터 -  */

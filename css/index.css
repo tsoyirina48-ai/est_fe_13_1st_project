@@ -96,6 +96,12 @@
     flex-wrap: wrap;
     padding: 30px;
   }
+  .text-h2-lg {
+    font-size: 32px;
+  }
+  .text-h3-md {
+    font-size: 20px;
+  }
 }
 @media (max-width: 768px) {
   .online-intro {
@@ -103,6 +109,12 @@
   }
   .slides_nav {
     display: none;
+  }
+  .text-h2-lg {
+    font-size: 26px;
+  }
+  .text-h3-md {
+    font-size: 18px;
   }
 }
 /* 온라인 */
@@ -208,6 +220,12 @@
   }
   .hero-title-box {
     align-items: center;
+  }
+  .hero-title-box .text-title-xl {
+    font-size: 48px;
+  }
+  .hero-title-desc {
+    font-size: 20px;
   }
 }
 
@@ -651,3 +669,33 @@ header .btn-md {
 
 
 /* 이스트 캠프 이야기 섹션 */
+@media (max-width: 768px) {
+  .hero-title-box .text-title-xl{
+    font-size: 38px;
+  }
+  .hero-title-desc {
+    font-size: 16px;
+  }
+}
+/* hero */
+
+/*  최이리나 => 박소호 수정 하단cta */
+/* .cta-banner{
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/cta-banner.jpg);
+  background-repeat: no-repeat;
+  background-position:center top;
+  background-size: cover;
+  z-index:1;
+}
+
+.cta-banner .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+/*  최이리나 => 박소호 수정 하단cta */
