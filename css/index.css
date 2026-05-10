@@ -654,6 +654,9 @@ header .btn-md{
     align-items: center;
     padding-right: 20px; 
   }
+  .roadmap-item:nth-child(even) .roadmap-item-title::after{
+    margin-top:10px;
+  }
   .roadmap-item:nth-child(even) .roadmap-item-title{
     flex-direction:column-reverse;
   }
