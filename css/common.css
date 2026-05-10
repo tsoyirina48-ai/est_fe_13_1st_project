@@ -43,6 +43,45 @@
 
 }
 
+[data-theme="dark"]{
+  --text-base:#F8FAFC;
+  --text-muted:#94A3B8;
+  --text-muted2:#cbd5e1;
+  --text-point:#6366F1;
+  --text-dark:#F8FAFC;
+  --text-online:#F8FAFC;
+  --btn-text:#f8fafc;
+  --nav-text:#cbd5e1;
+
+  --liner:#686868;
+
+  --bg-base:#111827;
+  --bg-muted:#0b1020;
+
+  --card-bg:#1A2236;
+  --card-bg2:#1A2236;
+
+  --section-label:rgb(99, 102, 241);
+
+  --dot-strong:#6366f1;
+  --dot-soft:rgba(49, 60, 95, .18);
+  --dot-shadow:0 0 20px rgba(99, 102, 241, .4);
+  --roadmap-item-hover:
+    0 0 10px rgba(99, 102, 241, .8),
+    0 0 30px rgba(99, 102, 241, .4),
+    0 0 50px rgba(99, 102, 241, .2);
+  --roadmap-item-after-hover:#9a9be9;
+  --roadmap-week:#64748b;
+  --roadmap-btn:rgba(99, 102, 241, .12);
+  --roadmap-text-color:#cbd5e1;
+
+  --btn-strong:#6366f1;
+  --btn-soft:#e0e7ff;
+  --btn-active:var(--medium--gray);
+  --btn-inactive-online:var(--darkmode-card);
+  --btn-inactive-review:var(--darkmode-card);
+}
+
 .text-title-xl {
   font-family: Pretentard;
   font-weight: bold;
