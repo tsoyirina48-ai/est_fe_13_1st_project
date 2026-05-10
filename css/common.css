@@ -2,6 +2,7 @@
 @import url("reset.css");
 @import url("flex-utility.css");
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+
 /* 변수 */
 :root{
 /* Color styles */
@@ -39,6 +40,8 @@
   --text-title-xl: 56px;
   --text-h2-lg: 36px;
   --text-h3-md: 24px;
+  --text-h3-md-s: 20px;
+  --text-h3-md-s: 20px;
   --text-h4-sm: 16px;
   --text-p: 14px;
   --text-link: 14px;
@@ -131,6 +134,31 @@ body{
 }
 
 
+html {
+  background-color: #ffffff;
+}
+body {
+  overscroll-behavior-y: none;
+  background-color: #ffffff;
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+  -webkit-font-smoothing: antialiased; /* 글꼴 외곽선 정밀도 향상 */
+  -moz-osx-font-smoothing: grayscale;
+}
 html {
   background-color: #ffffff;
 }
@@ -245,6 +273,17 @@ body {
 .text-h3-md-s {
   font-size: var(--text-h3-md-s);
 }
+.text-h3-md-s {
+  font-size: var(--text-h3-md-s);
+}
+
+/* h1{
+  font-family: Pretentard;
+  font-weight: bold;
+  font-size: var(--text-title-xl);
+  line-height: 81px;
+  color: var(--white);
+} */
 
 /* h1{
   font-family: Pretentard;
@@ -403,9 +442,12 @@ section {
   padding: 0;
 }
 .reviewtitle {
+  width: fit-content;
   text-align: center;
+  margin: 0 auto;
+  gap: 20px;
 }
-.reviewtitle > p {
+.reviewtitle > span {
   text-transform: uppercase;
 }
 
@@ -413,6 +455,12 @@ section {
 .online-content ul {
   display: flex;
   justify-content: space-between;
+}
+.faq_more {
+  display: flex;
+  justify-content: flex-end;
+}
+.faq_list {
 }
 
 /* 타이포그래피 */
@@ -473,6 +521,28 @@ p {
   border-radius: 5px;
   transition: 0.3s;
   font-size: var(--text-link);
+}
+@media (max-width: 1024px) {
+  .text-title-xl {
+    font-size: 48px;
+  }
+  .text-h2-lg {
+    font-size: 32px;
+  }
+  .text-h3-md {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .text-title-xl {
+    font-size: 36px;
+  }
+  .text-h2-lg {
+    font-size: 26px;
+  }
+  .text-h3-md {
+    font-size: 18px;
+  }
 }
 /* 링크 버튼 */
 .btn-primary {
@@ -637,6 +707,25 @@ p{
   background-color:var(--btn-strong);
   color:var(--white);
   border-color:var(--btn-strong);
+}
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 218px;
+  height: 54px;
+  font-size: var(--button--big);
+  border-radius: 50px;
+  border: solid 1px white;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.btn-cta:hover {
+  background-color: var(--e-s-t_blue);
+  color: var(--white);
+  border-color: var(--e-s-t_blue);
 }
 
 .slides_nav {

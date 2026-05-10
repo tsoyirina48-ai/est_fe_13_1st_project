@@ -240,9 +240,9 @@ header > .container {
   justify-content: space-between;
   align-items: center;
 }
-header .logo{
-  height:25px;
-  transition:.3s ease;
+header .logo {
+  height: 25px;
+  transition: 0.3s ease;
 }
 .logo a {
   display: block;
@@ -328,8 +328,9 @@ header .btn-md {
   }
 }
 /* 과정 찾기 섹션 */
-#course .container{
-  display:flex;
+#course .container {
+  width: 100%;
+  display: flex;
   justify-content: space-between;
 }
 #course .text-point{
