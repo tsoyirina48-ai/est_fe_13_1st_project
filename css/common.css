@@ -107,12 +107,18 @@
 /* 텍스트 */
 
 /* 버튼 */
+  /* hero 버튼 */
 [data-theme="dark"] .title-button-box .left-btn {
   background: var(--btn-strong);
 }
-[data-theme="dark"] .title-button-box .left-btn:hover{
+[data-theme="dark"] .title-button-box .left-btn:hover {
   color: var(--btn-strong);
 }
+[data-theme="dark"] .title-button-box .right-btn:hover {
+  background: var(--btn-strong);
+}
+  /* hero 버튼 */
+  /* online 버튼 */
 [data-theme="dark"] .online-category .active {
   background: var(--slide-ctg);
   color: var(--text-base);
@@ -129,6 +135,7 @@
   background: var(--card-bg2);
   color: var(--slide-ctg);
 }
+  /* online 버튼 */
 /* 버튼 */
 /* hero-online다크모드 --------------- */
 
