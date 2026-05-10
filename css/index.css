@@ -275,7 +275,7 @@ header .btn-md{
     display:block;
     width:100%;
     height:2px;
-    background-color:#333;
+    background-color:var(--liner);
     transition:.3s;
   }
   .toggle-line{
