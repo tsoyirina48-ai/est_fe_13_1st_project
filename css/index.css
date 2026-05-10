@@ -1005,6 +1005,7 @@ footer{
     padding-right: 27px;
 }
 
+
 .camp-story .card-text{
   background-color: var(--light--gray);
   border-radius: 0 0 10px 10px;
@@ -1029,6 +1030,15 @@ footer{
   font-size: 24px;
   color: var(--e-s-t_blue);
 }
+
+[data-theme="dark"] .main-card .icon{
+  /* padding: 7px 10px 14px 10px; */
+  padding-right: 10px;
+  padding-bottom: 7px;
+  font-size: 24px;
+  color:var(--medium--blue);
+}
+
 
 .main-card img{
     border-radius: 10px 10px 0 0;
@@ -1059,6 +1069,28 @@ footer{
 
 .small-card img{
     border-radius: 10px 10px 0 0;
+}
+
+[data-theme="dark"] .hero-content-subtitle{
+  color: #818CF8;
+}
+[data-theme="dark"] .camp-story .intro-header h2{
+  color: #F8FAFC;
+}
+[data-theme="dark"] .camp-story .intro-header p{
+  color: #CBD5E1;
+}
+[data-theme="dark"] .camp-story .card-text{
+  background-color: var(--card-bg);
+  color: #F8FAFC;
+}
+[data-theme="dark"] .camp-story .main-card-subtitle{
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .camp-story-sidelist .small-card-title{
+  background-color: var(--card-bg);
+  color: var(--white);
 }
 
 
