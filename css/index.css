@@ -228,13 +228,12 @@
 }
 
 /* 헤더 */
-.main-header {
-  position: sticky;
-  background-color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  top: 0;
-  z-index: 100;
-  padding: 22px 0;
+.main-header{
+  position:sticky;
+  box-shadow:0 2px 10px rgba(0, 0, 0, .05);
+  top:0;
+  z-index:100;
+  padding:22px 0;
 }
 header > .container {
   display: flex;
@@ -270,9 +269,10 @@ header .btn-md {
   display: none;
 }
 
-@media (max-width: 1024px) {
-  .main-header {
-    padding: 16px 30px;
+
+@media (max-width:1024px){
+  .main-header{
+    padding:16px 30px;
   }
 }
 @media (max-width: 768px) {
@@ -290,14 +290,14 @@ header .btn-md {
   }
   .toggle-line,
   .toggle-line::before,
-  .toggle-line::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: 0.3s;
+  .toggle-line::after{
+    content:'';
+    position:absolute;
+    display:block;
+    width:100%;
+    height:2px;
+    background-color:var(--liner);
+    transition:.3s;
   }
   .toggle-line {
     top: 50%;
@@ -329,9 +329,31 @@ header .btn-md {
 }
 /* 과정 찾기 섹션 */
 #course .container{
+  display:flex;
+  justify-content: space-between;
+}
+#course .text-point{
+  color:var(--text-point);
+}
+.course-intro{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+}
+.course-title{
+  line-height:43px;
+}
+#course .title-line{
+  display:block;
+}
+.course-grid{
+  max-width:840px;
   width: 100%;
   display:flex;
   justify-content: space-between;
+  box-sizing:border-box;
+  border-radius:5px;
+  box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.14);
 }
 .course-intro {
   display: flex;
@@ -396,6 +418,9 @@ header .btn-md {
   }
 }
 /* 커리큘럼 섹션 */
+#curriculum{
+  padding-bottom:0;
+}
 #curriculum::after{
   content:'';
   display:block;
@@ -422,6 +447,12 @@ header .btn-md {
   display: grid;
   align-items: center;
   box-sizing:border-box;
+}
+#curriculum .section-label{
+  margin-bottom:16px;
+}
+.curriculum-item-desc{
+  color:var(--text-muted2);
 }
 .roadmap-items{
   grid-column: 1 / -1;
@@ -478,7 +509,7 @@ header .btn-md {
 .sub-dot {
   justify-self: center;
   width:10px; height:10px;
-  background-color:var(--e-s-t_blue);
+  background-color:var(--dot-strong);
   border-radius:50%;
 }
 .roadmap-dot{
@@ -487,7 +518,7 @@ header .btn-md {
   justify-content:center;
   width:40px;
   height:40px;
-  background-color:#d9e5ff;
+  background-color:var(--dot-soft);
   box-shadow:0 0 20px rgba(0, 117, 255, .4);
   border-radius:50%;
   margin-bottom:10px;
@@ -510,21 +541,18 @@ header .btn-md {
 .roadmap-item:hover .roadmap-dot{
   transform:scale(1.15);
   background-color:#fff;
-  box-shadow:
-    0 0 10px rgba(0, 117, 255, .8),
-    0 0 30px rgba(0, 117, 255, .4),
-    0 0 50px rgba(0, 117, 255, .2);
+  box-shadow:var(--roadmap-item-hover);
 }
 .roadmap-dot:hover::after{
   transform:scale(1.2);
-  background-color:#5599ff;
+  background-color:var(--roadmap-item-after-hover);
 }
 .roadmap-dot::after{
   content:'';
   display:block;
   width:20px;
   height:20px;
-  background-color:var(--e-s-t_blue);
+  background-color:var(--dot-strong);
   border-radius:50%;
   transition:transform 0.3s ease;
   box-shadow:0 0 10px 2px rgba(0, 117, 255, 0.6);
@@ -549,14 +577,17 @@ header .btn-md {
   height:34px;
   margin-top:6px;
   box-sizing:border-box;
-  background-color:var(--medium--blue);
-  color:var(--e-s-t_blue);
+  background-color:var(--roadmap-btn);
+  color:var(--roadmap-text-color);
   border-radius:5px;
   transition:.3s;
 }
 .curriculum-btn:hover{
-  background-color:var(--e-s-t_blue);
-  color:var(--medium--blue);
+  background-color:var(--btn-strong);
+  color:var(--text-online);
+}
+.curriculum-item-week{
+  color:var(--roadmap-week);
 }
 @media (max-width: 1024px) {
   .curriculum-roadmap {
@@ -623,6 +654,10 @@ header .btn-md {
     min-width: 0;
     overflow: visible;
   }
+  .roadmap-item:hover{
+  transform:scale(1.05);
+  transition:transform .3s ease;
+}
   .roadmap-item:nth-child(1) { 
     grid-column: 1; 
     justify-self: start; 
@@ -673,6 +708,9 @@ header .btn-md {
     justify-self: center; 
     align-items: center;
     padding-right: 20px; 
+  }
+  .roadmap-item:nth-child(even) .roadmap-item-title::after{
+    margin-top:10px;
   }
   .roadmap-item:nth-child(even) .roadmap-item-title{
     flex-direction:column-reverse;
@@ -820,10 +858,6 @@ footer{
 .footer-logo{
   line-height:0;
 }
-.footer-logo img{
-  filter:brightness(0);
-  transition:.3s ease;
-}
 .footer-info address{
   display:flex;
   flex-direction:column;
@@ -865,7 +899,7 @@ footer{
   content:'';
   width:1px;
   height:14px;
-  background-color:var(--medium-gray2);
+  background-color:var(--liner);
   margin-right:5px;
 }
 .policy-links a:last-child::after{
