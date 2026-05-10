@@ -162,7 +162,8 @@ button{
 
 /* 레이아웃 */
 .container {
-  max-width:min(100% - 60px, 1272px);
+  width:100%;
+  max-width:1272px;
   margin: 0 auto;
 }
 .hidden {
