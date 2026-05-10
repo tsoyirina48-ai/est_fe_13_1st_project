@@ -603,6 +603,10 @@ header .btn-md{
     min-width: 0;
     overflow: visible;
   }
+  .roadmap-item:hover{
+  transform:scale(1.05);
+  transition:transform .3s ease;
+}
   .roadmap-item:nth-child(1) { 
     grid-column: 1; 
     justify-self: start; 
