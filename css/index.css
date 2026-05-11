@@ -205,7 +205,7 @@
 }
 
 .title-button-box .left-btn:hover{
-  background: var(--light--blue);
+  background: var(--btn-text);
   color: var(--e-s-t_blue);
 }
 .title-button-box .right-btn:hover{
