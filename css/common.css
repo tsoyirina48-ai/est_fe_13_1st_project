@@ -4,38 +4,38 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
 
 /* 변수 */
-:root{
-/* Color styles */
---black: rgba(0, 0, 0, 1);
---white: rgba(255, 255, 255, 1);
---medium--black: rgb(33, 33, 33);
---e-s-t_blue: rgba(0, 117, 255, 1);
---medium--gray: #6b7684;
---light--gray: #d9d9d9;
---light--blue: rgba(240, 247, 255, 1);
---medium--blue: rgba(229, 241, 255, 1);
---liner: rgba(162, 162, 162, 1);
---slides-gray: rgba(238, 238, 238, 1);
---medium-gray2: rgb(104, 104, 104);
---darkmode-card: rgba(26, 34, 54, 1);
---darkmode_main-p: rgba(203, 213, 225, 1);
---darkmode-p: rgba(148, 163, 184, 1);
---darkmode-inactive: rgba(100, 116, 139, 1);
---darkmode-btn-text: #f8fafc;
+:root {
+  /* Color styles */
+  --black: rgba(0, 0, 0, 1);
+  --white: rgba(255, 255, 255, 1);
+  --medium--black: rgb(33, 33, 33);
+  --e-s-t_blue: rgba(0, 117, 255, 1);
+  --medium--gray: #6b7684;
+  --light--gray: #d9d9d9;
+  --light--blue: rgba(240, 247, 255, 1);
+  --medium--blue: rgba(229, 241, 255, 1);
+  --liner: rgba(162, 162, 162, 1);
+  --slides-gray: rgba(238, 238, 238, 1);
+  --medium-gray2: rgb(104, 104, 104);
+  --darkmode-card: rgba(26, 34, 54, 1);
+  --darkmode_main-p: rgba(203, 213, 225, 1);
+  --darkmode-p: rgba(148, 163, 184, 1);
+  --darkmode-inactive: rgba(100, 116, 139, 1);
+  --darkmode-btn-text: #f8fafc;
 
---bg-base:rgb(255, 255, 255);
---bg-muted:rgb(249, 249, 249);
+  --bg-base: rgb(255, 255, 255);
+  --bg-muted: rgb(249, 249, 249);
 
---section-label:var(--e-s-t_blue);
+  --section-label: var(--e-s-t_blue);
 
---text-base:var(--medium--black);
---text-muted:var(--medium--gray);
---text-muted2:var(--medium--gray);
---text-point:var(--e-s-t_blue);
---text-dark:var(--black);
---text-online:var(--e-s-t_blue);
---btn-text:var(--white);
---nav-text:var(--medium--black);
+  --text-base: var(--medium--black);
+  --text-muted: var(--medium--gray);
+  --text-muted2: var(--medium--gray);
+  --text-point: var(--e-s-t_blue);
+  --text-dark: var(--black);
+  --text-online: var(--e-s-t_blue);
+  --btn-text: var(--white);
+  --nav-text: var(--medium--black);
   /* Text-size styles */
   --text-title-xl: 56px;
   --text-h2-lg: 36px;
@@ -295,6 +295,14 @@ body {
   color: var(--white);
 } */
 
+/* h1{
+  font-family: Pretentard;
+  font-weight: bold;
+  font-size: var(--text-title-xl);
+  line-height: 81px;
+  color: var(--white);
+} */
+
 h2{
   font-family: Pretentard;
   font-weight: bold;
@@ -369,6 +377,9 @@ button {
 }
 .logo-dark{
   display:none;
+}
+.logo-dark {
+  display: none;
 }
 /* 밑블럭 */
 
@@ -458,11 +469,33 @@ section {
   display: flex;
   justify-content: space-between;
 }
-.faq_more {
-  display: flex;
-  justify-content: flex-end;
+.faq_warp {
+  position: relative;
+  padding: 30px 0;
+  display: block;
 }
 
+.faq_more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* .faq_more {
+  display: flex;
+  justify-content: flex-end;
+} */
+.fqa_question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq_item {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.faq_item:last-child {
+  border-bottom: none;
+}
 /* 타이포그래피 */
 .text-title-xl{
   font-size:var(--text-title-xl);
@@ -607,13 +640,23 @@ p{
   color:var(--medium--gray);
 }
 /* 링크 버튼 */
-.Button-Big{
+.Button-Big {
   width: 174px;
   height: 54px;
   font-size: var(--button--big);
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 600;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
   align-items: center;
   color: var(--white);
@@ -695,10 +738,15 @@ p{
 }
 
 .review-text {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  /* gap: 20px; */
   padding-top: 20px;
+  color: var();
+}
+.review-text h3 {
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 .review-text p{
   padding-top: 20px
