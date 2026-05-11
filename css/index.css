@@ -424,7 +424,368 @@ header .btn-md {
   }
 }
 /* 커리큘럼 섹션 */
-#curriculum{
+#curriculum {
+  padding-bottom: 0;
+}
+
+#curriculum::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: var(--liner);
+  max-width: 1272px;
+  width: calc(100% - 40px);
+  margin: 115px auto 0;
+}
+#curriculum .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 90px;
+}
+.curriculum-roadmap {
+  position: relative;
+  width: 100%;
+  max-width: 1272px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  align-items: center;
+  box-sizing: border-box;
+}
+.roadmap-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  height: 1px;
+  background: var(--e-s-t_blue);
+  z-index: 0;
+}
+.roadmap-dots-group {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  position: absolute;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sub-dot {
+  justify-self: center;
+  width: 10px;
+  height: 10px;
+  background-color: var(--dot-strong);
+  border-radius: 50%;
+}
+
+.sub-dot:nth-child(1) { grid-column: 2; }
+.sub-dot:nth-child(2) { grid-column: 4; }
+.sub-dot:nth-child(3) { grid-column: 6; }
+.sub-dot:nth-child(4) { grid-column: 8; }
+.roadmap-items {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 160px;
+  position: relative;
+  z-index: 2;
+}
+.roadmap-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.roadmap-item:hover {
+  transform: scale(1.05);
+}
+.roadmap-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--dot-soft);
+  box-shadow: 0 0 20px rgba(0, 117, 255, 0.4);
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: 0.3s ease-out;
+  position: relative;
+}
+.roadmap-dot::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--dot-strong);
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px 2px rgba(0, 117, 255, 0.6);
+  filter: blur(1px);
+  position: absolute;
+}
+.roadmap-item:hover .roadmap-dot {
+  transform: scale(1.15);
+  background-color: #fff;
+  box-shadow: var(--roadmap-item-hover);
+}
+.roadmap-item:hover .roadmap-dot::after {
+  transform: scale(1.2);
+  background-color: var(--roadmap-item-after-hover);
+}
+.roadmap-item-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roadmap-item-title::after {
+  content: '';
+  display: block;
+  width: 163px;
+  height: 1px;
+  background-color: var(--liner);
+  margin: 0 auto;
+}
+
+.roadmap-item:first-child .roadmap-item-title::after,
+.roadmap-item:last-child .roadmap-item-title::after {
+  width: 140px;
+}
+
+.curriculum-item-week {
+  display: block;
+  font-size: 16px;
+  color: var(--roadmap-week);
+}
+
+.curriculum-item-desc {
+  margin-top: 10px;
+  color: var(--text-muted2);
+  word-break: keep-all;
+}
+.curriculum-btn{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 34px;
+  margin-top: 6px;
+  box-sizing: border-box;
+  background-color: var(--roadmap-btn);
+  color: var(--roadmap-text-color);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.curriculum-btn:hover {
+  background-color: var(--btn-strong);
+  color: var(--white);
+}
+@media (max-width: 1024px) {
+  .curriculum-roadmap {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    min-height: 350px; 
+    display: flex;
+    align-items: center;
+  }
+  .roadmap-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    background-color: var(--e-s-t_blue);
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+  .roadmap-items{
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr)); 
+    width: 100%;
+    margin: 0 auto;
+    gap: 0; 
+    padding: 0;
+  }
+  .roadmap-dots-group {
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .sub-dot {
+    grid-column: span 1;
+    justify-self: center; 
+    align-self: center; 
+  }
+  .sub-dot:nth-child(1) { 
+    grid-column: 2; 
+  }
+  .sub-dot:nth-child(2) { 
+    grid-column: 4; 
+  }
+  .sub-dot:nth-child(3) { 
+    grid-column: 6; 
+  }
+  .sub-dot:nth-child(4) { 
+    grid-column: 8; 
+  }
+  .roadmap-items {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+  }
+  .roadmap-item {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+  }
+  .roadmap-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  .roadmap-item:nth-child(1) {
+    grid-column: 1;
+    justify-self: start;
+    align-items: flex-start;
+  }
+  .roadmap-item:nth-child(2) { 
+    grid-column: 3; 
+    justify-self: center; 
+    align-items: center; 
+  }
+  .roadmap-item:nth-child(3) { 
+    grid-column: 5; 
+    justify-self: center; 
+    align-items: center; 
+  }
+  .roadmap-item:nth-child(4) { 
+    grid-column: 7; 
+    justify-self: center;
+    align-items: center; }
+  .roadmap-item:nth-child(5) { 
+    grid-column: 9; 
+    justify-self: end; 
+    align-items: flex-end; 
+  }
+  .roadmap-item-title,
+  .curriculum-item-desc {
+    text-align:center; 
+  }
+  .roadmap-item:nth-child(even) {
+    transform: translateY(calc(-50% + 20px));
+    flex-direction: column-reverse;
+  }
+  .roadmap-item:nth-child(odd) {
+    transform: translateY(calc(50% - 20px)); 
+  }
+  .roadmap-dot {
+    margin: 0; 
+    flex-shrink: 0;
+  }
+  .roadmap-item:first-child {
+    grid-column: 1;
+    justify-self: center; 
+    align-items: center;
+    padding-left: 20px; 
+  }
+  .roadmap-item:last-child {
+    grid-column: 9;
+    justify-self: center; 
+    align-items: center;
+    padding-right: 20px; 
+  }
+  .roadmap-item:nth-child(even) .roadmap-item-title::after {
+    margin-top: 10px;
+  }
+  .roadmap-item:nth-child(even) .roadmap-item-title {
+    flex-direction: column-reverse;
+  }
+  .roadmap-item:nth-child(2),
+  .roadmap-item:nth-child(3),
+  .roadmap-item:nth-child(4) {
+    justify-self: center;
+    align-items: center;
+  }
+  .roadmap-item-title,
+  .curriculum-item-desc {
+    overflow:hidden;
+  }
+}
+@media (max-width: 768px) {
+  #curriculum .roadmap-item {
+    transform: none;
+  }
+   .curriculum-roadmap {
+    position: relative;
+    min-height: 100%;
+  }
+  .roadmap-items {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items:flex-start;
+  }
+  .roadmap-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: flex-start;
+    justify-content: start;
+    min-height: auto;
+    column-gap:40px;
+  }
+
+  .roadmap-dot {
+    position: absolute;
+    left: 20px;
+    top: 50%; 
+    transform:translateY(-50%);
+  }
+  .roadmap-item:hover .roadmap-dot {
+    transform: translateY(-50%) scale(1.15);
+  }
+  .roadmap-item-title,
+  .curriculum-item-desc {
+    text-align: center;
+    align-items: center;
+    grid-column: 2;
+  }
+  .roadmap-item-title {
+    gap: 4px;
+  }
+  .roadmap-line {
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    transform: none;
+    height:auto;
+  }
+  .sub-dot {
+    display: none;
+  }
+  .roadmap-item:nth-child(even) .roadmap-item-title::after {
+    margin-top:0px;
+  }
+  .roadmap-item:nth-child(even) .roadmap-item-title {
+    flex-direction: column;
+  }
+}
+/* #curriculum{
   padding-bottom:0;
 }
 #curriculum::after{
@@ -810,7 +1171,7 @@ header .btn-md {
     margin:0;
     text-align:center;
   }
-}
+} */
 /* 베너 */
 .banner{
   width:100%;
