@@ -759,7 +759,8 @@ p {
 }
 #popup-btns {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 20px;
 }
 #popup button {
   border: none;
@@ -777,4 +778,16 @@ p {
   transform: translateY(-3px);
   transition: 0.3s;
   opacity: 0.92;
+}
+.today-label {
+  margin-left: 20px;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.today-label:hover {
+  transform: translateY(-3px);
+  opacity: 1;
 }
